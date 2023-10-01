@@ -7,7 +7,7 @@
     <title></title>
     <link rel="stylesheet" href="../Assets/Lib/css/bootstrap.min.css"/>
 </head>
-<body style="background-color: #ffeb99;">
+<body style="background-color: #f7f5f1;">
     <div class="container-fluid">
         <div class="row mt-5 mb-5">
             <div class="col-md-4">
@@ -19,22 +19,22 @@
                         <div class="row"> 
                             <div class="col-md-4"> </div>
                             <div class="col-md-8">
-                                <img src="../Assets/Images/icons8-user-100.png" alt="Product Image"/>
+                                <img src="../Assets/Images/user.png" alt="Product Image"/>
                             </div>
                            
                         </div>
                     </div>
                     <div class="nt-3">
                         <label for="userName" class="form-label">User Name</label>
-                        <input type="text" id="UnameTb" name="userName" placeholder="User Name" autocomplete="off" class="form-control" />
+                        <input type="email" runat="server" id="UnameTb" name="userName" placeholder="Your email here" autocomplete="off" class="form-control" />
                     </div>
                     <div class="nt-3">
                         <label for="password" class="form-label">Password</label>
-                        <input type="password" id="PasswordTb" name="password" placeholder="Password" autocomplete="off" class="form-control" />
-                    </div>
+                        <input type="password" runat="server" id="PasswordTb" name="password" placeholder="Password" autocomplete="off" class="form-control" />
+                    </div><br />
                     <div class="nt-3 d-grid">
-                        <asp:Button runat="server" Text="Login" CssClass="btn btn-success" style="background-color: black;" ID="LoginBtn" />
-
+                        <asp:Label runat="server" ID="ErrMsg" class="text-danger"></asp:Label>
+                        <asp:Button runat="server" Text="Login" CssClass="btn btn-success" style="background-color: #2a2416;" ID="LoginBtn" OnClick="LoginBtn_Click1" />
                     </div>
                 </form>
             </div>

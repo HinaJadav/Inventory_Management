@@ -5,19 +5,19 @@
        <div class="container-fuid">
         <div class="row">
             <div class="col">
-                <h3 class="text-center">
+                <h2 class="text-center">
                     Manage Sellers
-                </h3>
+                </h2><br /><br />
             </div>
         </div>
         <div class="row">
             <div class="col-md-4">
                 <div class="mb-3">
-                     <label for="SellerName" class="form-label text-black">Seller Name</label>
+                     <label for="SellerName" class="form-label text-black">Name</label>
                      <input type="text" runat="server" id="SNameTb" name="SellerName" placeholder="Seller's Name" autocomplete="off" class="form-control" /> 
                 </div>
                 <div class="mb-3">
-                     <label for="SellerEmail" class="form-label text-black">Seller Email</label>
+                     <label for="SellerEmail" class="form-label text-black">Email</label>
                      <input type="text"  runat="server" id="EmailTb" name="SellerEmail" placeholder="Seller's Email" autocomplete="off" class="form-control" /> 
                 </div>
                 <div class="mb-3">
@@ -25,35 +25,35 @@
                      <input type="text"  runat="server" id="PhoneTb" name="SellerPhone" placeholder="Seller's Phone No." autocomplete="off" class="form-control" /> 
                 </div>
                 <div class="mb-3">
-                     <label for="SellerAddress" class="form-label text-black">Seller Address</label>
-                     <input type="text"  runat="server" id="AddressTb" name="SellerAddress" placeholder="Seller's Address" autocomplete="off" class="form-control" /> 
+                     <label for="SellerPassword" class="form-label text-black" id="PasswordTb">Password</label>
+                     <input type="password" runat="server" id="PasswordTb" name="password" placeholder="Password" autocomplete="off" class="form-control" />
                 </div>
                 <div class="row">
                     <asp:Label runat="server" ID="ErrMsg" CssClass="text-danger text-center"></asp:Label>
                     <div class="col d-grid">
-                        <asp:Button runat="server" ID="UpdateBtn" Text="Update" CssClass="btn btn-success btn-block" style="background-color: darkslateblue;" OnClick="UpdateBtn_Click" />
+                        <asp:Button runat="server" ID="UpdateBtn" Text="Update" CssClass="btn btn-success btn-block" style="background-color: #2a2416;" OnClick="UpdateBtn_Click" />
                     </div>
                      <div class="col d-grid">
-                         <asp:Button runat="server" ID="SaveBtn" Text="Save" CssClass="btn btn-success btn-block" style="background-color: forestgreen;" OnClick="SaveBtn_Click" />
+                         <asp:Button runat="server" ID="SaveBtn" Text="Save" CssClass="btn btn-success btn-block" style="background-color: #2a2416;" OnClick="SaveBtn_Click" />
                      </div>
                      <div class="col d-grid">
-                         <asp:Button runat="server" ID="DeleteBtn" Text="Delete" CssClass="btn btn-success btn-block" style="background-color: red;" OnClick="DeleteBtn_Click" />
+                         <asp:Button runat="server" ID="DeleteBtn" Text="Delete" CssClass="btn btn-success btn-block" style="background-color: #2a2416;" OnClick="DeleteBtn_Click" />
                      </div>
 
                 </div>
             </div>
             <div class="col-md-8">
                 <asp:GridView ID="SellersList" runat="server" class="table table-bordered" CellPadding="4" ForeColor="#333333" GridLines="None" AutoGenerateSelectButton="True" OnSelectedIndexChanged="SellersList_SelectedIndexChanged">
-                    <AlternatingRowStyle BackColor="White" />
-                    <FooterStyle BackColor="#990000" Font-Bold="True" ForeColor="White" />
-                    <HeaderStyle BackColor="#ffb61a" Font-Bold="True" ForeColor="Black" />
-                    <PagerStyle BackColor="#FFCC66" ForeColor="#333333" HorizontalAlign="Center" />
-                    <RowStyle BackColor="#FFFBD6" ForeColor="#333333" />
-                    <SelectedRowStyle BackColor="#FFCC66" ForeColor="Navy" Font-Bold="True" />
-                    <SortedAscendingCellStyle BackColor="#FDF5AC" />
-                    <SortedAscendingHeaderStyle BackColor="#4D0000" />
-                    <SortedDescendingCellStyle BackColor="#FCF6C0" />
-                    <SortedDescendingHeaderStyle BackColor="#820000" />
+                   <AlternatingRowStyle BackColor="White" />
+                    <FooterStyle BackColor="#8b7648" Font-Bold="True" ForeColor="White" />
+                    <HeaderStyle BackColor="#8b7648" Font-Bold="True" ForeColor="White"/>
+                    <PagerStyle BackColor="#8b7648" ForeColor="#333333" HorizontalAlign="Center" />
+                    <RowStyle BackColor="#e7e0d1" ForeColor="#333333" />
+                    <SelectedRowStyle BackColor="#a58c56" ForeColor="Navy" Font-Bold="True" />
+                    <SortedAscendingCellStyle BackColor="#e7e0d1" />
+                    <SortedAscendingHeaderStyle BackColor="#8b7648" />
+                    <SortedDescendingCellStyle BackColor="#e7e0d1" />
+                    <SortedDescendingHeaderStyle BackColor="#8b7648" />
                 </asp:GridView>
             </div>
         </div>

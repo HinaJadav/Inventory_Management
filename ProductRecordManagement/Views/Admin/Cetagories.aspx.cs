@@ -45,6 +45,9 @@ namespace ProductRecordManagement.Views.Admin
                     ShowCategories();
                     ErrMsg.Text = "Category Inserted!!";
 
+                    CatNameTb.Value = "";
+                    DescriptionTb.Value = "";
+
                 }
 
             }
@@ -91,6 +94,9 @@ namespace ProductRecordManagement.Views.Admin
                     ShowCategories();
                     ErrMsg.Text = "Category Updated!!";
 
+                    CatNameTb.Value = "";
+                    DescriptionTb.Value = "";
+
                 }
 
             }
@@ -120,6 +126,8 @@ namespace ProductRecordManagement.Views.Admin
                     ShowCategories();
                     ErrMsg.Text = "Category Deleted!!";
 
+                    CatNameTb.Value = "";
+                    DescriptionTb.Value = "";
                 }
 
             }

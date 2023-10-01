@@ -29,7 +29,7 @@ namespace ProductRecordManagement.Views.Admin
         {
             try
             {
-                if (SNameTb.Value == "" || EmailTb.Value == "" || PhoneTb.Value == "" || AddressTb.Value == "")
+                if (SNameTb.Value == "" || EmailTb.Value == "" || PhoneTb.Value == "" || PasswordTb.Value == "")
                 {
                     ErrMsg.Text = "Missing Data!!";
                 }
@@ -38,10 +38,10 @@ namespace ProductRecordManagement.Views.Admin
                     string SellerName = SNameTb.Value;
                     string SellerEmail = EmailTb.Value;
                     string SellerPhone = PhoneTb.Value;
-                    string SellerAddress = AddressTb.Value;
+                    string SellerPassword = PasswordTb.Value;
 
                     string Query = "insert into SellerTbl values('{0}','{1}', '{2}', '{3}')";
-                    Query = string.Format(Query, SellerName, SellerEmail, SellerPhone, SellerAddress);
+                    Query = string.Format(Query, SellerName, SellerEmail, SellerPhone, SellerPassword);
 
                     con.SetData(Query);
                     ShowSellers();
@@ -49,7 +49,7 @@ namespace ProductRecordManagement.Views.Admin
                     SNameTb.Value = "";
                     EmailTb.Value = "";
                     PhoneTb.Value = "";
-                    AddressTb.Value = "";
+                    PasswordTb.Value = "";
 
                 }
 
@@ -66,7 +66,7 @@ namespace ProductRecordManagement.Views.Admin
             SNameTb.Value = SellersList.SelectedRow.Cells[2].Text;
             EmailTb.Value = SellersList.SelectedRow.Cells[3].Text;
             PhoneTb.Value = SellersList.SelectedRow.Cells[4].Text;
-            AddressTb.Value = SellersList.SelectedRow.Cells[5].Text;
+            PasswordTb.Value = SellersList.SelectedRow.Cells[5].Text;
 
             if (SNameTb.Value == "")
             {
@@ -84,7 +84,7 @@ namespace ProductRecordManagement.Views.Admin
         {
             try
             {
-                if (SNameTb.Value == "" || EmailTb.Value == "" || PhoneTb.Value == "" || AddressTb.Value == "")
+                if (SNameTb.Value == "" || EmailTb.Value == "" || PhoneTb.Value == "" || PasswordTb.Value == "")
                 {
                     ErrMsg.Text = "Missing Data!!";
                 }
@@ -93,10 +93,10 @@ namespace ProductRecordManagement.Views.Admin
                     string SellerName = SNameTb.Value;
                     string SellerEmail = EmailTb.Value;
                     string SellerPhone = PhoneTb.Value;
-                    string SellerAddress = AddressTb.Value;
+                    string SellerPassword = PasswordTb.Value;
 
-                    string Query = "update SellerTbl set SellerName = '{0}', SellerEmail = '{1}', SellerPhone = '{2}', SellerAddress = '{3}' where SellerId = {4}";
-                    Query = string.Format(Query, SellerName, SellerEmail, SellerPhone, SellerAddress, SellersList.SelectedRow.Cells[1].Text);
+                    string Query = "update SellerTbl set SellerName = '{0}', SellerEmail = '{1}', SellerPhone = '{2}', SellerPassword = {3} where SellerId = {4}";
+                    Query = string.Format(Query, SellerName, SellerEmail, SellerPhone, SellerPassword, SellersList.SelectedRow.Cells[1].Text);
 
                     con.SetData(Query);
                     ShowSellers();
@@ -104,7 +104,7 @@ namespace ProductRecordManagement.Views.Admin
                     SNameTb.Value = "";
                     EmailTb.Value = "";
                     PhoneTb.Value = "";
-                    AddressTb.Value = "";
+                    PasswordTb.Value = "";
 
                 }
 
@@ -127,7 +127,7 @@ namespace ProductRecordManagement.Views.Admin
                     string SellerName = SNameTb.Value;
                     string SellerEmail = EmailTb.Value;
                     string SellerPhone = PhoneTb.Value;
-                    string SellerAddress = AddressTb.Value;
+                    string SellerPassword = PasswordTb.Value;
 
                     string Query = "delete from SellerTbl where SellerId = {0}";
                     Query = string.Format(Query, SellersList.SelectedRow.Cells[1].Text);
@@ -138,7 +138,7 @@ namespace ProductRecordManagement.Views.Admin
                     SNameTb.Value = "";
                     EmailTb.Value = "";
                     PhoneTb.Value = "";
-                    AddressTb.Value = "";
+                    PasswordTb.Value = "";
 
                 }
 
